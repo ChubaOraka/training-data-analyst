@@ -16,7 +16,7 @@
 package com.google.training.appdev.services.gcp.cloudstorage;
 
 // TODO: Write a star import for Cloud Storage
-
+import com.google.cloud.storage.*;
 
 
 // END TODO
@@ -36,7 +36,9 @@ public class ImageService {
 // The StorageOptions class has a getDefaultInstance()
 // static method.
 // Use the getService() method to get the storage client
-
+private static Storage storage = StorageOptions
+    .getDefaultInstance()
+    .getService();
 
 
 
@@ -48,7 +50,8 @@ public class ImageService {
 // Get the value using ${google.storage.bucket}
 // This references the GCLOUD_BUCKET environment variable
 
-
+    @Value("${google.storage.bucket}")
+    private String bucketName;
 
 // END TODO
 
