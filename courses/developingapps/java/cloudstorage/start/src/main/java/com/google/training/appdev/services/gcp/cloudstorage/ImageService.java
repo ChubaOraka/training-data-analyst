@@ -55,7 +55,6 @@ private static Storage storage = StorageOptions
 
 // END TODO
 
-
     public String saveImage(MultipartFile file) 
                                     throws IOException {
     // The existing code in the method creates a unique name
